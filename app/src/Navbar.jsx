@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Nav = styled.nav`
   display: grid;
-  grid-template-columns: 180px auto 400px;
+  grid-template-columns: 180px auto 300px 250px;
   background-color: #222222;
 `;
 
@@ -61,6 +61,17 @@ function Navbar() {
         <input className="" type="search" placeholder="Search" aria-label="Search"/>
         <button className="" type="submit">Search</button>
       </Search>
+      <Menu>
+        <ContentList>
+          <List>
+            <Name href="/">Gist</Name>
+          </List>
+          <List>
+            <Name className="" href="/">Login</Name>
+          </List>
+        </ContentList>
+      </Menu>
+
 
     </Nav>
   );
