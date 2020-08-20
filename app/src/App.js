@@ -1,17 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import styled from 'styled-components';
 import './App.css';
+import Gist from './Gist.jsx';
+import Navbar from './Navbar.jsx';
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10%;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-      </header>
+    <div>
+      <Navbar/>
+      <Content>
+        <Gist/>
+      </Content>
     </div>
   );
 }

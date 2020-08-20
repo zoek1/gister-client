@@ -2,9 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
-  display: grid;
-  grid-template-columns: 180px auto 300px 250px;
   background-color: #222222;
+`;
+
+const Content = styled.div`
+  display: grid;
+  grid-template-columns: 0px auto 300px 250px;
+  margin: 0 10%;
 `;
 
 const Menu = styled.div`
@@ -18,8 +22,8 @@ const ContentImage = styled.a`
 `;
 
 const Imagen = styled.img`
-  width: 30;
-  height: 30;
+  width: 30px;
+  height: 30px;
 `;
 
 const ContentList = styled.ul`
@@ -44,35 +48,35 @@ const Search = styled.form`
 function Navbar() {
   return (
     <Nav>
-      <ContentImage href="/">
-        <Imagen src="/" />
-      </ContentImage>
-      <Menu>
-        <ContentList>
-          <List>
-            <Name href="/">All gists</Name>
-          </List>
-          <List>
-            <Name className="" href="/">My gists</Name>
-          </List>
-        </ContentList>
-      </Menu>
-      <Search>
-        <input className="" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="" type="submit">Search</button>
-      </Search>
-      <Menu>
-        <ContentList>
-          <List>
-            <Name href="/">Gist</Name>
-          </List>
-          <List>
-            <Name className="" href="/">Login</Name>
-          </List>
-        </ContentList>
-      </Menu>
-
-
+      <Content>
+        <ContentImage href="/">
+          <Imagen src="/" />
+        </ContentImage>
+        <Menu>
+          <ContentList>
+            <List>
+              <Name href="/">All gists</Name>
+            </List>
+            <List>
+              <Name className="" href="/">My gists</Name>
+            </List>
+          </ContentList>
+        </Menu>
+        <Search>
+          <input className="" type="search" placeholder="Search" aria-label="Search"/>
+          <button className="" type="submit">Search</button>
+        </Search>
+        <Menu>
+          <ContentList>
+            <List>
+              <Name href="/">Gist</Name>
+            </List>
+            <List>
+              <Name className="" href="/">Login</Name>
+            </List>
+          </ContentList>
+        </Menu>
+      </Content>
     </Nav>
   );
 }
