@@ -42,19 +42,18 @@ const Etiqueta = styled.h4`
   color: #fcfcfc;
 `;
 
-function Gist () {
-  const codeString = '(num) => num + 1';
+function Gist (props) {
   return (
     <Container>
       <Head>
-        <Imagen src="/"/>
-        <Nombre>Miguel Angel Gordian</Nombre>
+        <Imagen src={props.img}/>
+        <Nombre>{props.name}</Nombre>
       </Head>
-      <Created>Created 3 hours ago</Created>
-      <Description>Update the gist pendiente</Description>
-      <Etiqueta>diff</Etiqueta>
+      <Created>{props.time}</Created>
+      <Description>{props.description}</Description>
+      <Etiqueta>{props.etiqueta}</Etiqueta>
       <SyntaxHighlighter language="javascript" showLineNumbers="true" style={docco}>
-        {codeString}
+        {props.code}
       </SyntaxHighlighter>
     </Container>
   );
